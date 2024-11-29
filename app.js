@@ -1,5 +1,15 @@
 let url = "https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes/";
 let urlFinal = "/municipios";
+//limpando as variáveis antes de dar sequência na lógica
+let nome = "";
+let id;
+let resultado = "";
+
+function reiniciar() {
+  console.log("Função reiniciar iniciada");
+  url = "https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes/";
+  id = 0;
+}
 
 function pesquisar() {
   console.log("função pesquisar iniciada");
@@ -8,16 +18,11 @@ function pesquisar() {
   let listagemCidades = document.getElementById("lista_respostas");
   console.log(selecao);
   console.log(section);
-
-  //limpando as variáveis antes de dar sequência na lógica
-  let nome = "";
-  let id;
-  let resultado = "";
+  listagemCidades.innerHTML = "";
 
   if (selecao == "") {
     section.innerHTML = "<p>Favor selecionar uma mesoregião.</p>";
   } else {
-    //todo list
     //corre o array procurando o ID da mesoregião
     for (let item of dados) {
       nome = item.nome.toUpperCase();
@@ -33,7 +38,7 @@ function pesquisar() {
             const response = await fetch(url);
             const data = await response.json();
 
-            // Exemplo de como acessar os dados:
+            // Acessa os dados da variavel url
             if (Array.isArray(data)) {
               // Se os dados são um array de objetos
               data.forEach((vetor) => {
@@ -43,6 +48,7 @@ function pesquisar() {
                 console.log(vetor.nome); // lista os nomes
               });
               listagemCidades.innerHTML += resultado;
+              reiniciar();
             } else {
               // Se os dados são um único objeto
             }
