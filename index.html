@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cidades por Microregiões IBGE</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <p>Escolha a meso região:</p>
+      <select id="mesoregiao">
+        <option value="" disabled selected>Selecione a Região</option>
+        <!-- Coolocar o nome correto de acordo com o Array depois -->
+        <option value="3101">Regiao</option>
+        <option value="3102">Regiao</option>
+        <option value="3103">Regiao</option>
+        <option value="3104">Regiao</option>
+        <option value="3105">Regiao</option>
+        <option value="3106">Central Mineira</option>
+        <option value="3107">Regiao</option>
+        <option value="3108">Regiao</option>
+        <option value="3109">Regiao</option>
+        <option value="3110">Regiao</option>
+        <option value="3111">Regiao</option>
+        <option value="3112">Regiao</option>
+      </select>
+      <button onclick="pesquisar()">Pesquisar</button>
+    </header>
+    <main class="principal">      
+      </div>
+      <div class="principal__campo__resultado" id="campoResultado">
+        <p class="respostas__listadas" id="respostas">
+          Aqui serão exibidas as respostas.          
+            <h2>Cidade Exemplo</h2>                       
+          </div>
+        </p>
+        <div class="item-resultado" id="lista_respostas"><p>Lista de respostas</p></div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <p>Criado e desenvolvido por Matheus Melo.</p>
+    <p>Entre em contato: matheusmelo@hotmail.com.br</p>
+  </footer>
+  <script src="dados.js"></script>
+  <script src="app.js"></script>
+</html>
