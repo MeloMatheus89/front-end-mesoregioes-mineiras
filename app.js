@@ -9,6 +9,8 @@ function reiniciar() {
   console.log("Função reiniciar iniciada");
   url = "https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes/";
   id = 0;
+  console.log(url);
+  resultado = "";
 }
 
 function pesquisar() {
@@ -27,11 +29,13 @@ function pesquisar() {
     for (let item of dados) {
       nome = item.nome.toUpperCase();
       id = item.id;
+
       if (item.id == selecao) {
         //demonstra o nome da região e o ID   --- Manter o trecho do ID enquanto não apresentamos os resultados do outro objeto.
         section.innerHTML = `<h2>Mesoregião de ${nome} e com o ID de ${id}.</h2>`;
         //altera a URL do objeto para a mesoregiao correta
         url += item.id + urlFinal;
+        listagemCidades.innerHTML = "";
         //"visita" a url
         async function fetchData() {
           try {

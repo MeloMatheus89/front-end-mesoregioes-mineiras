@@ -1,15 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;    
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.cabecalho{
-    display: flex;
-    background-color: #007bff;
+.cabecalho {
+  display: flex;
+  background-color: #007bff;
 }
 
-.menu__superior__meso{
-    flex-wrap: wrap;
-    width: 200px;
-    height: fit-content;
+.menu__superior__meso {
+  flex-wrap: wrap;
+  width: 200px;
+  height: fit-content;
 }
