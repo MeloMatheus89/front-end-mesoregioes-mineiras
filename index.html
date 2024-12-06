@@ -8,8 +8,8 @@
   </head>
   <body>
     <header class="cabecalho">
-      <p>Escolha a meso região:</p>
-      <select id="mesoregiao">
+      <h2 class="selecao__mesorregiao">Escolha a meso região:</h2>
+      <select id="mesoregiao" class="seletor">
         <option value="" disabled selected>Selecione a Região</option>        
         <option value="3101">Noroeste de Minas</option>
         <option value="3102">Norte de Minas</option>
@@ -24,17 +24,17 @@
         <option value="3111">Campo das Vertentes</option>
         <option value="3112">Zona da Mata</option>
       </select>
-      <button onclick="pesquisar()">Pesquisar</button>
+      <button onclick="pesquisar()" class="botao__pesquisar">Pesquisar</button>
     </header>
     <main class="principal">      
       </div>
       <div class="principal__campo__resultado" id="campoResultado">
         <p class="respostas__listadas" id="respostas">
           Aqui serão exibidas as respostas.          
-            <h2>Cidade Exemplo</h2>                       
+            <h2 class="subtitulo">Cidade Exemplo</h2>                       
           </div>
         </p>
-        <div class="item-resultado" id="lista_respostas"></div>
+        <div class="item__resultado" id="lista_respostas"></div>
       </div>
     </main>
   </body>

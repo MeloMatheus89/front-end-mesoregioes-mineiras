@@ -32,7 +32,7 @@ function pesquisar() {
 
       if (item.id == selecao) {
         //demonstra o nome da região e o ID   --- Manter o trecho do ID enquanto não apresentamos os resultados do outro objeto.
-        section.innerHTML = `<h2>Mesoregião de ${nome} e com o ID de ${id}.</h2>`;
+        section.innerHTML = `<h2 class="subtitulo">Mesoregião de ${nome}.</h2>`;
         //altera a URL do objeto para a mesoregiao correta
         url += item.id + urlFinal;
         listagemCidades.innerHTML = "";
