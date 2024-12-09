@@ -8,33 +8,33 @@
   </head>
   <body>
     <header class="cabecalho">
-      <h2 class="selecao__mesorregiao">Escolha a meso região:</h2>
-      <select id="mesoregiao" class="seletor">
-        <option value="" disabled selected>Selecione a Região</option>        
-        <option value="3101">Noroeste de Minas</option>
-        <option value="3102">Norte de Minas</option>
-        <option value="3103">Jequitinhonha</option>
-        <option value="3104">Vale do Mucuri</option>
-        <option value="3105">Triângulo Mineiro/Alto Paranaíba</option>
-        <option value="3106">Central Mineira</option>
-        <option value="3107">Metropolitana de Belo Horizonte</option>
-        <option value="3108">Vale do Rio Doce</option>
-        <option value="3109">Oeste de Minas</option>
-        <option value="3110">Sul/Sudoeste de Minas</option>
-        <option value="3111">Campo das Vertentes</option>
-        <option value="3112">Zona da Mata</option>
+      <p>Escolha a meso região:</p>
+      <select id="mesoregiao">
+        <option value="" disabled selected>Selecione a Região/Filial:</option>        
+        <option value="3101">Noroeste de Minas </option>
+        <option value="3102">Norte de Minas (Montes Claros)</option>
+        <option value="3103">Jequitinhonha (Montes Claros)</option>
+        <option value="3104">Vale do Mucuri (Ipatinga)</option>
+        <option value="3105">Triângulo Mineiro/Alto Paranaíba (Patos de Minas)</option>
+        <option value="3106">Central Mineira (Belo Horizonte)</option>
+        <option value="3107">Metropolitana de Belo Horizonte(Belo Horizonte)</option>
+        <option value="3108">Vale do Rio Doce(Ipatinga)</option>
+        <option value="3109">Oeste de Minas (Divinópolis)</option>
+        <option value="3110">Sul/Sudoeste de Minas(Passos/Pouso Alegre)</option>
+        <option value="3111">Campo das Vertentes (Pouso Alegre)</option>
+        <option value="3112">Zona da Mata (Ubá)</option>
       </select>
-      <button onclick="pesquisar()" class="botao__pesquisar">Pesquisar</button>
+      <button onclick="pesquisar()">Pesquisar</button>
     </header>
     <main class="principal">      
       </div>
       <div class="principal__campo__resultado" id="campoResultado">
         <p class="respostas__listadas" id="respostas">
           Aqui serão exibidas as respostas.          
-            <h2 class="subtitulo">Cidade Exemplo</h2>                       
+            <h2>Cidade Exemplo</h2>                       
           </div>
         </p>
-        <div class="item__resultado" id="lista_respostas"></div>
+        <div class="item-resultado" id="lista_respostas"></div>
       </div>
     </main>
   </body>
