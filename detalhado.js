@@ -43,3 +43,8 @@ function pesquisarCidade(evento) {
   }
   fetchData();
 }
+
+// TO DO LIST - 1.0
+// 1. Refinar o campo de pesquisa para contemplar acentos e maiúsculas e minúsculas.
+// 2. Mostrar o resultado na tela de forma organizada.
+// 3. Mostrar o resultado manipulando o DOM e criando elementos HTML.
