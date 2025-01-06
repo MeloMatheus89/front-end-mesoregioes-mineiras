@@ -47,7 +47,7 @@ function pesquisar() {
               // Se os dados são um array de objetos
               data.forEach((vetor) => {
                 resultado += `
-                <li> ${vetor.nome} </li>                
+                <li class="lista__respostas__cidades"> ${vetor.nome} </li>                
                 `;
                 console.log(vetor.nome); // lista os nomes
               });
