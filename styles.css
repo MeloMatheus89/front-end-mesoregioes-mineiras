@@ -52,45 +52,54 @@ body {
 }
 
 .cabecalho {
+  align-items: center;
   display: flex;
   flex-direction: row;
   background-color: var(--azul-ceitel);
   font-size: 28px;
-  align-items: baseline;
-  text-align: center;
-  padding: 0.15em;
-  height: 1.5em;
-  justify-content: center;
-  width: 100vw;
-  padding: 0em auto;
+  padding: 0.1em;
+  height: 1.2em;
+  /* justify-content: space-between; */
 }
+
 .cabecalho__logo {
-  width: 55%;
-  height: 55%;
+  flex: 0 0 auto;
+  height: 100%;
+  width: auto;
   object-fit: contain;
+  margin-right: 0.5em;
 }
 
 .cabecalho__texto {
   color: var(--white);
   font-family: var(--font-family-sans-serif);
   font-size: 24px;
-  text-align: left;
-  width: 80%;
-  margin: 0;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  text-align: center;
+}
+.cabecalho__selecao {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
 }
 .cabecalho__seletor {
-  border-radius: 12px;
-  border: 1px solid;
+  border-radius: 3px;
+  border: 1px solid var(--azul-terc);
   height: 80%;
   font-family: var(--font-family-sans-serif);
   font-size: 16px;
-  padding-left: 1em;
-  margin: 0 1em;
+  text-align: left;
+  margin-right: 2em;
 }
-
+.cabecalho__seletor::backdrop {
+  border: 1px solid var(--light);
+}
 .cabecalho__button {
   width: 8em;
-  height: 80%;
+  height: 88%;
   border-radius: 6px;
   background-color: var(--azul-terc);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -98,16 +107,7 @@ body {
   font-weight: 800;
   color: var(--white);
   border: 1px solid var(--light);
-}
-
-.selecao__mesorregiao {
-  font-family: var(--font-family-sans-serif);
-  font-size: 20px;
-}
-
-.seletor {
-  font-family: var(--font-family-sans-serif);
-  font-weight: 600;
+  margin-right: 1em;
 }
 
 .botao__pesquisar {
@@ -120,11 +120,6 @@ body {
   border: var(--gray) 2px;
 }
 
-.menu__superior__meso {
-  flex-wrap: wrap;
-  width: 200px;
-  height: fit-content;
-}
 .principal__campo__resultado {
   margin: 1em;
   text-align: center;
@@ -134,7 +129,6 @@ body {
 .lista__respostas {
   display: flex;
   flex-direction: column;
-  width: 100vw;
   position: center;
   text-align: justify;
   padding: 0 6em;
@@ -152,7 +146,7 @@ footer {
   background-color: var(--azul-ceitel);
   font-size: 11px;
   color: var(--white);
-  width: 100%;
-  position: fixed;
-  bottom: 0; /* Alinha ao fundo da página */
+  width: 100vw;
+  position: fixed; /* Garante que a posição é fixa no final da página*/
+  bottom: 0; /* Alinha ao final da página */
 }
