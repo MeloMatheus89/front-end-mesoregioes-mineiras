@@ -49,7 +49,7 @@ function pesquisar() {
                 resultado += `
                 <li class="lista__respostas__cidades"> ${vetor.nome} </li>                
                 `;
-                console.log(vetor.nome); // lista os nomes
+                // console.log(vetor.nome); // lista os nomes
               });
               listagemCidades.innerHTML += resultado;
               reiniciar();

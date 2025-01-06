@@ -69,6 +69,9 @@ body {
   object-fit: contain;
   margin-right: 0.5em;
 }
+.cabecalho__titulo {
+  color: var(--dark);
+}
 
 .cabecalho__texto {
   color: var(--white);
