@@ -26,13 +26,16 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --azul-ceitel: #2d2f7c;
+  --azul-secundario: #363895;
+  --azul-terc: #242663;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
@@ -41,6 +44,7 @@
 body {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 .subtitulo {
   font-size: 1.5rem;
@@ -49,12 +53,53 @@ body {
 
 .cabecalho {
   display: flex;
-  background-color: var(--primary);
+  flex-direction: row;
+  background-color: var(--azul-ceitel);
   font-size: 28px;
   align-items: baseline;
   text-align: center;
   padding: 0.15em;
+  height: 1.5em;
+  justify-content: center;
+  width: 100vw;
+  padding: 0em auto;
 }
+.cabecalho__logo {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+
+.cabecalho__texto {
+  color: var(--white);
+  font-family: var(--font-family-sans-serif);
+  font-size: 24px;
+  text-align: left;
+  width: 80%;
+  margin: 0;
+}
+.cabecalho__seletor {
+  border-radius: 12px;
+  border: 1px solid;
+  height: 80%;
+  font-family: var(--font-family-sans-serif);
+  font-size: 16px;
+  padding-left: 1em;
+  margin: 0 1em;
+}
+
+.cabecalho__button {
+  width: 8em;
+  height: 80%;
+  border-radius: 6px;
+  background-color: var(--azul-terc);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white);
+  border: 1px solid var(--light);
+}
+
 .selecao__mesorregiao {
   font-family: var(--font-family-sans-serif);
   font-size: 20px;
@@ -85,12 +130,14 @@ body {
   text-align: center;
 }
 .lista__respostas__cidades {
-  margin: 0 auto;
 }
 .lista__respostas {
   display: flex;
   flex-direction: column;
+  width: 100vw;
   position: center;
+  text-align: justify;
+  padding: 0 6em;
 }
 .item-resultado {
   margin: solid 2px var(--indigo);
@@ -102,8 +149,8 @@ body {
 
 footer {
   text-align: center;
-  background-color: var(--primary);
-  font-size: 8px;
+  background-color: var(--azul-ceitel);
+  font-size: 11px;
   color: var(--white);
   width: 100%;
   position: fixed;

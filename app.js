@@ -15,7 +15,7 @@ function reiniciar() {
 
 function pesquisar() {
   console.log("função pesquisar iniciada");
-  let selecao = document.getElementById("mesoregiao").value;
+  let selecao = document.getElementById("mesorregiao").value;
   let section = document.getElementById("campoResultado");
   let listagemCidades = document.getElementById("lista_respostas");
   console.log(selecao);
