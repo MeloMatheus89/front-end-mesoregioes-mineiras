@@ -84,7 +84,12 @@ body {
   margin: 1em;
   text-align: center;
 }
-
+.lista__respostas {
+  display: flex;
+  flex-direction: column;
+  position: center;
+  margin: 0 6em;
+}
 .item-resultado {
   margin: solid 2px var(--indigo);
   color: var(--dark);
