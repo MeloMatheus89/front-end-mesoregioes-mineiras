@@ -127,8 +127,8 @@ body {
   margin: 1em;
   text-align: center;
 }
-.lista__respostas__cidades {
-}
+/* .lista__respostas__cidades {
+} */
 .lista__respostas {
   display: flex;
   flex-direction: column;

@@ -1,17 +1,30 @@
 const botaoPesquisar = document.getElementById("botaoPesquisar");
 const campoPesquisa = document.getElementById("nomeCidade");
+const url =
+  "https://servicodados.ibge.gov.br/api/v1/localidades/estados/31/municipios";
 
 botaoPesquisar.addEventListener("click", pesquisarCidade);
 
 //Manipulação do DOM para mostrar o resultado
-const resultado = document.getElementById("resultado");
+const resultado = document.getElementById("campoResultado");
+function escreveNaTela(texto) {
+  resultado.innerHTML = `<h3 class="principal__campo__resultado__subtitulo">Você procurou pela cidade de: ${texto.nome}</h3>
+  <p class="principal__campo__resultado__texto"> Cidade de ${texto.nome} pertence a <strong>Mesorregião</strong> de ${texto.microrregiao.mesorregiao.nome} e a <strong>Microrregião</strong> de ${texto.microrregiao.nome}</p>
+  <p> <strong>Região Intermediária:</strong> ${texto["regiao-imediata"]["regiao-intermediaria"]["nome"]}</p>`;
+}
 
-const url =
-  "https://servicodados.ibge.gov.br/api/v1/localidades/estados/31/municipios";
+//Implementar depois e melhorar como vai ser a saída do texto
+function corrigeDigitacao(texto) {
+  texto.value = texto.value.replace(/\b\w/g, function (l) {
+    return l.toUpperCase();
+  });
+}
 
 function pesquisarCidade(evento) {
   evento.preventDefault();
   let nomeCidade = campoPesquisa.value;
+  //nomeCidadeCorrigido era para ser o nome da cidade com a penas a primeira letra maiuscula
+  //nomeCidadeCorrigido = corrigeDigitacao(nomeCidade.toLowerCase());
 
   if (nomeCidade === "") {
     alert("Favor digitar o nome de uma cidade.");
@@ -29,10 +42,15 @@ function pesquisarCidade(evento) {
         for (let item of dados) {
           if (item.nome.includes(nomeCidade)) {
             //Se achar, mostrar o nome da cidade, mesorregião e micorregião dele.
+            escreveNaTela(item);
             console.log(item);
+
             // console.log(item.microrregiao);
-            console.log(item.microrregiao.mesorregiao.nome);
+            // console.log(item.regiao - imediata.regiao - intermediaria.nome);
             return;
+          } else {
+            resultado.innerHTML = `<h3> Cidade não encontrada</h3>
+            <p> Favor validar o texto digitado e conferir acentuação, maiúsculas e minúsculas. </p>`;
           }
         }
       }
