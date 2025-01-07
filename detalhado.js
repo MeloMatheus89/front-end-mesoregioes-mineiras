@@ -40,7 +40,7 @@ function pesquisarCidade(evento) {
       if (Array.isArray(dados)) {
         // Iterando o array de objetos
         for (let item of dados) {
-          if (item.nome.includes(nomeCidade)) {
+          if (item.nome === nomeCidade) {
             //Se achar, mostrar o nome da cidade, mesorregião e micorregião dele.
             escreveNaTela(item);
             console.log(item);

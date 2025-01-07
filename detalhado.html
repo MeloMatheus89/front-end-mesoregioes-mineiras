@@ -14,7 +14,16 @@
         alt="Logo da Distribuidora Ceitel"
         class="cabecalho__logo"
       />
-      <!-- TODO Criar botão de voltar para a página index.html -->
+      <!-- Navegação voltar -->
+      <div class="cabecalho__navegacao">
+        <a class="cabecalho__navegacao__link" href="index.html">
+          <img
+            src="img/seta-voltar.png"
+            class="cabecalho__navegacao__btn-voltar"
+          />
+          Voltar
+        </a>
+      </div>
       <h1 class="cabecalho__texto">Detalhado: Municípios</h1>
       <form>
         <input
@@ -32,8 +41,26 @@
         <div class="principal__campo__resultado" id="campoResultado">
           <p class="respostas__listadas" id="respostas"></p>
         </div>
-        <div class="item-resultado">
-          <ul class="lista__respostas" id="lista_respostas"></ul>
+        <div class="principal__instrucoes">
+          <span class="principal__instrucoes__detalhes">
+            <strong>Instruções de uso:</strong>
+          </span>
+
+          <p class="principal__instrucoes__texto">
+            Pesquise pelo nome da cidade digitando-o corretamente (com as letras
+            maiúsculas, minúsculas e acentuação) para localizar a cidade.
+          </p>
+          <br />
+          <p class="principal__instrucoes__texto">
+            Após isso digite "Enter" ou clique em "Pesquisar". A resposta deverá
+            conter o nome da Cidade, nome da Mesorregião, nome da Microrregião e
+            a Região Intermediária de acordo com os dados do IBGE.
+          </p>
+          <br />
+          <p class="principal__instrucoes__texto">
+            Caso não tenha ficado claro qual é a melhor rota ou filial de
+            atendimento da Ceitel, procure um dos responsáveis pela logística.
+          </p>
         </div>
       </div>
     </main>

@@ -34,11 +34,14 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none;
 }
 
 body {
@@ -69,8 +72,31 @@ body {
   object-fit: contain;
   margin-right: 0.5em;
 }
+.cabecalho__navegacao {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.75em;
+  justify-content: flex-start;
+}
+.cabecalho__navegacao__link {
+  color: var(--white);
+  font-size: 11px;
+  font-family: var(--font-family-monospace);
+  justify-content: flex-end;
+}
+.cabecalho__navegacao__btn-voltar {
+  flex: 0 0 auto;
+  height: 2.3em;
+  width: auto;
+  object-fit: contain;
+  flex-wrap: nowrap;
+}
 .cabecalho__titulo {
+  font-family: var(--font-family-sans-serif);
+  font-size: 30px;
   color: var(--dark);
+  align-items: center;
+  text-align: center;
 }
 
 .cabecalho__texto {
@@ -80,6 +106,17 @@ body {
   white-space: nowrap;
   flex: 0 0 auto;
   text-align: center;
+  margin-right: 1rem;
+}
+.cabecalho__input {
+  height: 2.25em;
+  width: 30vw;
+  border-radius: 12px;
+  border: 1px solid var(--azul-terc);
+}
+
+.cabecalho__input::placeholder {
+  padding-left: 1rem;
 }
 .cabecalho__selecao {
   display: flex;
@@ -142,6 +179,39 @@ body {
   font-family: var(--font-family-monospace);
   box-sizing: border-box;
   text-align: inherit;
+}
+
+.principal__instrucoes {
+  margin: 1rem 6rem;
+}
+.principal__instrucoes__detalhes {
+  font-family: var(--font-family-sans-serif);
+  font-size: 24px;
+}
+.principal__instrucoes__texto {
+  font-family: var(--font-family-monospace);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.principal__instrucoes__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal__botao__links {
+  width: 16rem;
+  height: 3rem;
+  border-radius: 6px;
+  background-color: var(--azul-terc);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white);
+  border: 1px solid var(--light);
+  margin-right: 1em;
+  text-align: center;
+  text-decoration: none;
 }
 
 footer {
