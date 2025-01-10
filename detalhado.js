@@ -1,7 +1,6 @@
 const botaoPesquisar = document.getElementById("botaoPesquisar");
 const campoPesquisa = document.getElementById("nomeCidade");
-const url =
-  "https://servicodados.ibge.gov.br/api/v1/localidades/estados/31/municipios";
+const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados/31/municipios";
 
 botaoPesquisar.addEventListener("click", pesquisarCidade);
 
@@ -10,7 +9,7 @@ const resultado = document.getElementById("campoResultado");
 function escreveNaTela(texto) {
   resultado.innerHTML = `<h3 class="principal__campo__resultado__subtitulo">Você procurou pela cidade de: ${texto.nome}</h3>
   <p class="principal__campo__resultado__texto"> Cidade de ${texto.nome} pertence a <strong>Mesorregião</strong> de ${texto.microrregiao.mesorregiao.nome} e a <strong>Microrregião</strong> de ${texto.microrregiao.nome}</p>
-  <p> <strong>Região Intermediária:</strong> ${texto["regiao-imediata"]["regiao-intermediaria"]["nome"]}</p>`;
+  <p class="principal__campo__resultado__texto"> <strong>Região Intermediária:</strong> ${texto["regiao-imediata"]["regiao-intermediaria"]["nome"]}</p>`;
 }
 
 //Implementar depois e melhorar como vai ser a saída do texto
