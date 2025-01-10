@@ -1,3 +1,5 @@
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
 # Projeto pensado em ajudar a localizar as cidades de atendimento de acordo com a filial e mesoregião
 
 Próximos passos:
@@ -53,3 +55,6 @@ Este projeto baseado em JavaScript, HTML5 e CSS3 interage com a API do IBGE para
 - **Interface do Usuário:** Melhorar a interface do usuário com estilos CSS e elementos mais interativos.
 - **Cache:** Implementar um mecanismo de cache para armazenar os resultados das consultas e evitar requisições desnecessárias.
 - **Busca Completa:** Implementar uma busca completa que permita ao usuário digitar o nome da mesoregião ou município.
+
+**Novas versões em breve.**
+Aguardem melhorias na usabilidade das ferramentas.
