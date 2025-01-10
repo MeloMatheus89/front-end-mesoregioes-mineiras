@@ -9,22 +9,33 @@ Próximos passos:
 
 **Descrição:**
 
-Este script JavaScript interage com a API do IBGE para permitir a busca de municípios por mesorregião. O usuário seleciona uma mesoregião em um dropdown e o script exibe a lista de municípios correspondentes.
+Este projeto baseado em JavaScript, HTML5 e CSS3 interage com a API do IBGE para permitir a busca de acordo com a opção selecionada no banco de dados do IBGE. Possui duas funcionalidades:
+
+1. O usuário seleciona uma mesorregião em um dropdown e o script exibe a lista de municípios correspondentes.
+2. O usuário pode procurar pela cidade específica e receber ali na resposta a Mesorregião, Microrregião e região Imediata da cidade procurada.
 
 **Funcionalidades:**
 
 - **Consulta à API do IBGE:** Realiza requisições à API para obter dados geográficos.
 - **Interface do Usuário:** Permite ao usuário selecionar a mesorregião desejada.
 - **Exibição de Resultados:** Apresenta os municípios em uma lista formatada.
+- **Procura por Cidades:** Apresenta os resultados de Mesorregião, microrregião e região imediata e entrega em um texto padronizado.
 
-**Como Funciona:**
+**Como Funciona: Seleção da Mesorregião**
 
 1. **Seleção da Mesorregião:** O usuário escolhe uma mesoregião em uma lista suspensa.
 2. **Consulta à API:** O script envia uma requisição à API do IBGE com o ID da mesoregião selecionada.
 3. **Processamento dos Dados:** Os dados retornados pela API são processados para extrair os nomes dos municípios.
 4. **Exibição dos Resultados:** Os nomes dos municípios são exibidos em uma lista na página.
 
-**Tecnologias Utilizadas:**
+**Como Funciona: Detalhado: Cidades**
+
+1. **Procura pela cidade:** O usuário procura pela cidade no campo de pesquisa no menu superior.
+2. **Consulta à API:** O script envia uma requisição à API do IBGE procurando na lista de cidades mineiras.
+3. **Processamento dos dados:** Os dados são processados e organizados de forma a levantar resultados congruentes com a pesquisa feita.
+4. **Exibição dos Resultados:** Os dados são apresentados na tela mediante uma formatação para garantir maior legibilidade da mesma.
+
+   **Tecnologias Utilizadas:**
 
 - **JavaScript:** Linguagem de programação para a lógica do script.
 - **API do IBGE:** Fonte de dados para obter informações geográficas.
