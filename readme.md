@@ -1,4 +1,7 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![HTML5](HTML5.svg)
+![CSS3](CSS3.svg)
+![JavaScript](JavaScript.svg)
 
 # Projeto pensado em ajudar a localizar as cidades de atendimento de acordo com a filial e mesoregião
 
