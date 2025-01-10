@@ -112,6 +112,7 @@ body {
   height: 2.25em;
   width: 30vw;
   border-radius: 12px;
+  padding-left: 1rem;
   border: 1px solid var(--azul-terc);
 }
 
