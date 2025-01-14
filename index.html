@@ -1,39 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Relatórios - Cidades de MG</title>
+    <link href="styles.css" rel="stylesheet" />
+    <title>Consulta Municipios e Regiões de Minas Gerais</title>
   </head>
   <body>
     <header class="cabecalho">
-      <img src="img/logo_ceitel.webp" alt="Logo da Distribuidora Ceitel" class="cabecalho__logo" />
+      <img src="img/image (1).png" alt="logo da Distribuidora CEITEL" />
+      <h1 class="cabecalho__texto">Consulta Municipios e Regiões de Minas Gerais</h1>
     </header>
-    <h1 class="cabecalho__titulo">Procura por municípios</h1>
-    <!-- Trocar a estilização dos botões aqui para outro formato -->
-    <div class="principal__instrucoes">
-      <div class="principal__instrucoes__card">
-        <span class="principal__instrucoes__detalhes">
-          <strong>Escolha o que deseja procurar</strong></span
-        >
-        <a href="mesorregiao.html" class="principal__botao__links">Mesorregião</a>
-        <a href="detalhado.html" class="principal__botao__links">Detalhado: Municípios</a>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeEArqFV-JqKkGGIvejkzntS98UuRpsGe9V4Add6bWmVrxtIA/viewform?usp=dialog"
-          target="_blank"
-          class="principal__botao__links"
-          >#Avaliação da ferramenta#</a
-        >
-        <p class="principal__instrucoes__texto">
-          Em ambos os cenários ainda se contemplam apenas cidades do estado de Minas Gerais.
-        </p>
+    <main class="principal">
+      <!-- Aqui é mais interessante usar o display grid -->
+      <section class="principal__pesquisa">
+        <h2 class="principal__pesquisa__subtitulo">Filtros</h2>
+        <div class="principal__pesquisa__barra">
+          <span>Tipo Pesquisa:</span>
+          <span>Descrição:</span>
+          <select select id="tipo_pesquisa" class="principal__pesquisa__seletor">
+            <option value="" disabled selected>Selecione o tipo de pesquisa</option>
+            <option value="1">Mesorregião</option>
+            <option value="2">Detalhado: Municípios</option>
+          </select>
+          <button class="principal__pesquisa__botao">Pesquisar</button>
+        </div>
+      </section>
+      <div class="principal__resultados">
+        <h3 class="principal__resultados__subtitulo">Mesorregião: EXEMPLO</h3>
+        <!-- dados.lenght deverá ser usado aqui para preencher o campo de municípios -->
+        <span>"23 municípios"</span>
+        <div>
+          <!-- Tabela de respostas -->
+          <table>
+            <tr>
+              <th>Município</th>
+              <th>Mesorregião</th>
+              <th>Microrregião</th>
+              <th>Região Intermediária</th>
+            </tr>
+            <!-- Aqui começa um exemplo de apresentação da tabela -->
+            <tr>
+              <td>Arinos</td>
+              <td>Noroeste de Minas</td>
+              <td>Unaí</td>
+              <td>Patos de Minas</td>
+            </tr>
+            <!--  -->
+            <tr>
+              <td>2,1</td>
+              <td>2,2</td>
+              <td>2,3</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3,1</td>
+              <td>3,2</td>
+              <td>3,3</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4,1</td>
+              <td>4,2</td>
+              <td>4,3</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
       </div>
-    </div>
+    </main>
 
     <footer>
       <p>Criado e desenvolvido por Matheus Melo.</p>
       <p>Entre em contato: matheusmelo@hotmail.com.br</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
